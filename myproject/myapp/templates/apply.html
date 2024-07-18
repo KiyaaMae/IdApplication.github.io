@@ -1,0 +1,125 @@
+<!-- myapp/templates/apply.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP ID Application - Apply Now</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <script src="{% static 'js/validation.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{% static 'images/pup-logo.png' %}" alt="PUP Logo" class="logo">
+            <h1>Polytechnic University of the Philippines</h1>
+            <nav class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'team' %}">Our Team</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="apply-section">
+            <h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
+            {% if error_message %}
+            <div class="alert alert-danger">{{ error_message }}</div>
+            {% endif %}
+            <form id="application-form" action="{% url 'apply' %}" method="post" onsubmit="return validateForm()">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Select Reason for Application:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="reason" value="Transferee"> Transferee</label>
+                        <label><input type="radio" name="reason" value="Shiftee"> Shiftee</label>
+                        <label><input type="radio" name="reason" value="Late Filing"> Late Filing</label>
+                        <label><input type="radio" name="reason" value="Damaged"> Damaged</label>
+                        <label><input type="radio" name="reason" value="Old ID"> Old ID</label>
+                        <label><input type="radio" name="reason" value="Correction of Entry"> Correction of Entry</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Select Your Academic Information:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="academic" value="LHS"> LHS</label>
+                        <label><input type="radio" name="academic" value="SHS"> SHS</label>
+                        <label><input type="radio" name="academic" value="Undergrad"> Undergrad</label>
+                        <label><input type="radio" name="academic" value="Graduate School"> Graduate School</label>
+                        <label><input type="radio" name="academic" value="Open University"> Open University</label>
+                        <label><input type="radio" name="academic" value="College of Law"> College of Law</label>
+                        <label><input type="radio" name="academic" value="Institute of Technology"> Institute of Technology</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name">Middle Name *</label>
+                    <input type="text" id="middle-name" name="middle_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-number">Student Number *</label>
+                    <input type="text" id="student-number" name="student_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="college">College *</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course, Yr. & Section *</label>
+                    <input type="text" id="course" name="course" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Home Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone/Mobile Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <h3>In case of Emergency, please notify:</h3>
+                <div class="form-group">
+                    <label for="emergency-name">Complete Name *</label>
+                    <input type="text" id="emergency-name" name="emergency_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergency-phone">Phone/Mobile Number *</label>
+                    <input type="tel" id="emergency-phone" name="emergency_phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergency-address">Address *</label>
+                    <input type="text" id="emergency-address" name="emergency_address" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="cancel-btn" onclick="return confirmCancel()">Cancel</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Polytechnic University of the Philippines. All rights reserved.</p>
+    </footer>
+</body>
+</html>

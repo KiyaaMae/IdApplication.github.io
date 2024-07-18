@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Polytechnic University of the Philippines</title>
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{% static 'images/pup-logo.png' %}" alt="PUP Logo" class="logo">
+            <h1>Polytechnic University of the Philippines</h1>
+            <nav class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'team' %}">Our Team</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- SCHOOL BACKGROUND -->
+        <div class="school-background">
+            <img src="{% static 'images/pup.jpg' %}" alt="Computer Science">
+        </div>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <h2>Our Features</h2>
+            <div class="features">
+                <button>Learn Online Classes</button>
+                <button>Bridge Courses</button>
+                <button>Huge Library</button>
+                <button>Practical Exposure</button>
+            </div>
+        </section>
+
+        <!-- POPULAR COURSES -->
+        <section class="courses-section">
+            <h1>Popular Courses Offered</h1>
+            <div id="courses">
+                <div class="course-item">
+                    <h3>Computer Science</h3>
+                    <img src="{% static 'images/cse.jpeg' %}" alt="Computer Science">
+                    <a href="#"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="course-item">
+                    <h3>Business Studies</h3>
+                    <img src="{% static 'images/business.jpeg' %}" alt="Business Studies">
+                    <a href="#"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="course-item">
+                    <h3>Media and Journalism</h3>
+                    <img src="{% static 'images/journalism.jpeg' %}" alt="Media and Journalism">
+                    <a href="#"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="course-item">
+                    <h3>Arts & Humanities</h3>
+                    <img src="{% static 'images/arts.jpeg' %}" alt="Arts & Humanities">
+                    <a href="#"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="course-item">
+                    <h3>Medical Science</h3>
+                    <img src="{% static 'images/medical.jpeg' %}" alt="Medical Science">
+                    <a href="#"><button class="apply">Apply Here</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Polytechnic University of the Philippines. All rights reserved.</p>
+    </footer>
+</body>
+</html>

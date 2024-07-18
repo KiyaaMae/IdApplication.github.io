@@ -1,0 +1,30 @@
+<!-- myapp/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PUP ID Application Portal{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{% static 'images/pup-logo.png' %}" alt="PUP Logo" class="logo">
+            <h1>Polytechnic University of the Philippines</h1>
+            <nav class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'team' %}">Our Team</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Polytechnic University of the Philippines. All rights reserved.</p>
+    </footer>
+</body>
+</html>

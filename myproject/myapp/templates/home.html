@@ -1,0 +1,48 @@
+<!-- myapp/templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h2>ID APPLICATION PORTAL</h2>
+        <a href="{% url 'apply' %}" class="apply-btn">Apply Now</a>
+    </div>
+</section>
+<section class="extended-content">
+    <h2>How to Apply for a New/Replacement ID</h2>
+    <ol class="steps">
+        <li><strong>Step 1:</strong> Visit the PUP ID Application Portal and click on the "Apply Now" button.</li>
+                <li><strong>Step 2:</strong> Select the reason for your application (e.g., Transferee, Shiftee, Late Filing, Damaged, Old ID, Correction of Entry).</li>
+                <li><strong>Step 3:</strong> Select your academic information (e.g., LHS, SHS, Undergrad, Graduate School, Open University, College of Law, Institute of Technology).</li>
+                <li><strong>Step 4:</strong> Fill out the application form with your personal details, including:
+                    <div class="indent">
+                        <ul>
+                            <li>First Name</li>
+                            <li>Middle Name</li>
+                            <li>Last Name</li>
+                            <li>Student Number (format: xxxx-xxxxx-MN-x)</li>
+                            <li>Gender</li>
+                            <li>Date of Birth</li>
+                            <li>College</li>
+                            <li>Course, Year, & Section</li>
+                            <li>Home Address</li>
+                            <li>Phone/Mobile Number (format: +63xxxxxxxxxx)</li>
+                            <li>Email Address (format: example@email.com)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>Step 5:</strong> Provide emergency contact details, including:
+                    <div class="indent">
+                        <ul>
+                            <li>Complete Name</li>
+                            <li>Phone/Mobile Number</li>
+                            <li>Address</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>Step 6:</strong> Review your application and ensure all details are correct.</li>
+                <li><strong>Step 7:</strong> Click the "Submit" button to complete your application.</li>
+                <li><strong>Step 8:</strong> Wait for the confirmation email with further instructions on the ID pick-up process.</li>
+    </ol>
+</section>
+{% endblock %}

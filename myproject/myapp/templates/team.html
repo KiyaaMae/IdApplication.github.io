@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Polytechnic University of the Philippines</title>
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{% static 'images/pup-logo.png' %}" alt="PUP Logo" class="logo">
+            <h1>Polytechnic University of the Philippines</h1>
+            <nav class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'team' %}">Our Team</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- TEAM SECTION -->
+        <section class="team-section">
+            <h1 class="title">Meet Our Developers</h1>
+            <div id="team">
+                <div class="team-member">
+                    <img src="{% static 'images/mj.jpg' %}" alt="Team Member 1">
+                    <h3>Mr. Malcolm James Murillo</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="{% static 'images/kia.jpg' %}" alt="Team Member 2">
+                    <h3>Ms. Kia Marie Malubag</h3>
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLES AND RESPONSIBILITIES SECTION -->
+        <section class="roles-section">
+            <h2>Roles and Responsibilities</h2>
+            <div class="roles-container">
+                <div class="role">
+                    <h3>Backend Developer</h3>
+                    <div class="role-indent">
+                        <ul>
+                            <li>Develops and maintains the server-side logic.</li>
+                            <li>Ensures high performance and responsiveness.</li>
+                            <li>Manages database integration and security.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="role">
+                    <h3>Frontend Developer</h3>
+                    <div class="role-indent">
+                        <ul>
+                            <li>Implements the visual elements and UI/UX design.</li>
+                            <li>Ensures a seamless user experience.</li>
+                            <li>Works closely with the backend developer for integration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INFORMATION SECTION -->
+        <section class="contact-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <h3>Mr. Malcolm James Murillo</h3>
+                    <div class="contact-indent">
+                        <ul>
+                            <li>Facebook: <a href="#">@malcolmjames16</a></li>
+                            <li>Instagram: <a href="#">@malcolmjames25</a></li>
+                            <li>GitHub: <a href="#">github.com/malcolmjames</a></li>
+                            <li>LinkedIn: <a href="#">linkedin.com/in/malcolmjames</a></li>
+                            <li>Gmail: <a href="mailto:murillomalcolmjames@gmail.com">murillomalcolmjames@gmail.com</a></li>
+                            <li>Telegram: <a href="#">@malcolmjames</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <h3>Ms. Kia Marie Malubag</h3>
+                    <div class="contact-indent">
+                        <ul>
+                            <li>Facebook: <a href="#">@kiamarie</a></li>
+                            <li>Instagram: <a href="#">@kiamarie</a></li>
+                            <li>GitHub: <a href="#">github.com/kiamarie</a></li>
+                            <li>LinkedIn: <a href="#">linkedin.com/in/kiamarie</a></li>
+                            <li>Gmail: <a href="mailto:kiamarie@gmail.com">kiamarie@gmail.com</a></li>
+                            <li>Telegram: <a href="#">@kiamarie</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Polytechnic University of the Philippines. All rights reserved.</p>
+    </footer>
+</body>
+</html>

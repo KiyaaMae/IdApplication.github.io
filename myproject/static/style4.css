@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #800000;
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 99%;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 3rem;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.75rem;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.team-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 70px; /* To offset the fixed header */
+}
+
+.team-section h1.title {
+    margin-bottom: 2rem;
+    color: #800000;
+    font-size: 2rem; /* Larger font size for the title */
+}
+
+#team {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 1rem;
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+.team-member img {
+    width: 100%;
+    height: 500px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-bottom: 0.5rem;
+}
+
+.team-member h3 {
+    margin: 0.5rem 0;
+    color: #800000;
+}
+
+.team-member p {
+    color: #333;
+}
+
+.roles-section, .contact-section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.roles-section h2, .contact-section h2 {
+    color: #800000;
+    margin-bottom: 1rem;
+}
+
+.roles-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.role {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin: 1rem;
+}
+
+.role h3 {
+    color: #800000;
+    margin-bottom: 0.5rem;
+}
+
+.role-indent {
+    padding-left: 10rem;
+}
+
+.role ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.role li {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-method {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin: 1rem;
+}
+
+.contact-method h3 {
+    color: #800000;
+    margin-bottom: 0.5rem;
+}
+
+.contact-indent {
+    padding-left: 12rem;
+}
+
+.contact-method ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-method li {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.contact-method a {
+    color: #800000;
+    text-decoration: none;
+}
+
+.contact-method a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+}

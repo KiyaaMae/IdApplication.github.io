@@ -1,0 +1,18 @@
+<!-- myapp/templates/confirm_application.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Application</title>
+</head>
+<body>
+    <h2>Do you want to confirm the application?</h2>
+    <form action="{% url 'process_application' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="application_id" value="{{ application.id }}">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.history.back();">Cancel</button>
+    </form>
+</body>
+</html>
